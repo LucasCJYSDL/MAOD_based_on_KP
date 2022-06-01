@@ -64,7 +64,7 @@ def get_q_decom_args(args):
 
     # others
     # total iteration number
-    args.n_itr = 5000
+    args.n_itr = 50000
     # how many episodes in an iteration
     args.n_episodes = 1
     # how many training times in an iteration
