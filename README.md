@@ -2,7 +2,11 @@
 
 ## How to config the environments:
 - python 3.6
+- pytorch 1.6
+- tensorboard 2.5
 - matplotlib
+- pandas
+- numpy
 - tqdm
 - networkx
 - ...
@@ -30,16 +34,23 @@ Probably you will need a python IDE, like PyCharm, to run this file properly.
 ```bash
 --use_median=True
 ```
-Otherwise, please add:
+  Otherwise, please add:
 ```bash
 --use_median=False
 ```
-- To change the test environment, please add:
+- To change the test environment, please add:  
 ```bash
 --task='grid_roomX'
-```
-Or:
+```  
+  Or:
 ```bash
 --task='grid_mazeX'
 ```
 where 'X' needs to be replaced with a number that represents the number of agents in the test environment. Please refer to the 'tasks' subfoloder in each folder mentioned above to check the available test environments.
+
+- To produce the results of the MARL baselines on the 6-agent Grid Maze task, please go to the 'MARL_baselines' folder.  
+  Fisrt, the parameter setup is available in 'common/arguments'.
+  To run algorithm X which can be any of ['qmix', 'cwqmix', 'owqmix', 'coma', 'msac', 'maven'] with seed Y, please run:
+  ```bash
+  python main.py --alg=X --seed=Y
+  ```
